@@ -2,9 +2,30 @@
 
 sidebar-view {
   @border-size: 1px;
-
   display: block;
   width: @sidebar-width + @border-size;
   border-left: @border-size solid @c-gray;
   box-sizing: border-box;
+}
+.sidebar-view__delimetr{
+  border-bottom: 1px solid @c-gray;
+}
+.sidebar-view__item{
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+.sidebar-view__item_remove-btn{
+  width:10px;
+  height:10px;
+  margin-left: 5px;
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 10px;
+  cursor: pointer;
+  background: @c-gray-light;
+  border: 1px solid @c-gray;
+}
+.sidebar-view__item_remove-btn span{
+  padding: 0 0 0 2px;
 }

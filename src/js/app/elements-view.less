@@ -8,3 +8,49 @@ elements-view {
   padding: 10px;
   border-bottom: 1px solid @c-gray;
 }
+.elements-view__button-block{
+  border-bottom: 1px solid @c-gray;
+  text-align: center;
+}
+.elements-view__button{
+  height: 40px;
+  width: 90%;
+  background: @c-white;
+  border: 2px solid @c-dark;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.elements-view__button:hover{
+  background: @c-gray-light;
+  border: 2px solid @c-gray;
+}
+.elements-view__element{
+  padding: 5px 0 5px 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid @c-gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+.elements-view__element:hover{
+  background: @c-gray-light;
+  padding-right: 70px;
+}
+.elements-view__element div{  
+  position: absolute;
+  display:none;
+  right: 12px;
+  top:6px;  
+}
+.elements-view__element:hover div{
+  display: block;
+}
+.elements-view__element div span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;  
+  background: @c-gray;
+  margin-left: 12px;
+}

@@ -1,1 +1,12 @@
-Sidebar
+<div>Selected: {{selected.title}}</div>
+<div class="sidebar-view__delimetr">Tags:</div>
+<div class="sidebar-view__item sidebar-view__delimetr" ng-repeat="tag in selected.tags">
+    <div>{{tag}}</div>
+    <div class="sidebar-view__item_remove-btn" ng-click="removeTag($index)"><span>X</span>
+    </div>
+</div>
+<form ng-submit="addTag(tag)">
+    <label>New Tag: <input type="string" ng-model="tag" min="100" max="600" step="1"></label>
+    <button type="submit">Add</button>
+</form>
+

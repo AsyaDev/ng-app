@@ -13,10 +13,12 @@
     "angular": "~1.4.0"
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-less": "^4.0.1",
-    "gulp-ng-html2js": "^0.2.3"
+    "gulp-ng-html2js": "^0.2.3",
+    "http-server": "^0.12.3"
   }
 }

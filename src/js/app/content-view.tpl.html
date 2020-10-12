@@ -1,2 +1,19 @@
-<some-1></some-1>
-Content
+<some-1 data="data"></some-1>
+<div class="content-view__delimetr"></div>
+<div class="content-view__select">Order: 
+    <select ng-model="selectSorter" ng-options="opt for opt in selectArr"> 
+    </select> 
+</div>
+<div>Date: <input type="checkbox" ng-model="showTime" ng-change="ShowTime()" /></div>
+<div>Search: <input type="text" class="input" ng-model="searchString" placeholder="start typing..."></div>
+<div class="content-view__delimetr"></div>
+<ul>
+    <li ng-repeat="d in data | searchFilter: searchString | orderBy:selectSorter" ng-class="{'active': activeItem[$index]}" class="content-view__item" ng-click="selctItem({item: d}); selectClass($index)">
+        <div>Title: {{d.title}}</div>
+        <div>Date:<span>{{d.date | date : (showTime ? 'medium' : 'dd.MM.yyyy')}}</span></div>
+    </li>
+</ul>
+<form ng-submit="addNewItem(item)">
+    <label>New Title: <input type="string" ng-model="item.title" min="100" max="600" step="1"></label>
+    <button type="submit">Add</button>
+</form>

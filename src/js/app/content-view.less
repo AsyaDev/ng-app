@@ -4,3 +4,26 @@ content-view {
   display: block;
   border-left: 1px solid @c-gray;
 }
+content-view ul{
+  padding:0;
+}
+.content-view__delimetr{
+  border-bottom: 1px solid @c-gray;
+  margin: 10px 0;
+}
+.content-view__select select{
+  text-transform: capitalize;
+}
+.content-view__item {
+  width:100%;
+  list-style: none;
+  border-bottom: 1px solid @c-gray;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.active{
+  background-color:@c-gray-light;
+}
+.content-view__item:hover{
+  background-color:@c-gray-light;
+}
